@@ -1,5 +1,4 @@
-function laCajaDePandora(numero){
-    // proximamente escribiremos codigo aqui
+
 
     const resultados = [];
 
@@ -61,4 +60,14 @@ function laCajaDePandora(numero){
         return datos;
     };
 
+const personalInfoDeMatias = {
+    'nombre': 'Matías',
+    'edad' : 37,
+    'nacionalidad' : 'Argentino'
+
+}
+
+const obtenerInfo = () => {
+    return personalInfoDeMatias;
+}
 
