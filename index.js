@@ -14,7 +14,7 @@ function laCajaDePandora(numero){
             if (residuo < 10) {
                 resultados.push(residuo);
             } else {
-                // Convertimos los residuos de 10 a 15 a letras A-F
+                // Convertimos los residuos de 10 a 15 a letras A-F.
                 switch (residuo) {
                     case 10:
                         resultados.push('A');
@@ -41,7 +41,7 @@ function laCajaDePandora(numero){
             numero = Math.floor(numero / 16);
         }
     
-        // Convertimos la lista de dígitos a una cadena y la invertimos para obtener el orden correcto
+        // Convertimos la lista de dígitos a una cadena y la invertimos para obtener el orden correcto.
         return resultados.reverse().join('');
     }
 
