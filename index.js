@@ -1,3 +1,7 @@
+
+
+
+
 function laCajaDePandora(numero){
 
     // proximamente escribiremos codigo aqui
@@ -78,4 +82,12 @@ const personalInfoDeMatias = {
 const obtenerInfo = () => {
     return personalInfoDeMatias;
 }
+
+const gerson = () => {
+    return {
+        nombre:"Gerson Meneses",
+        edad: 21,
+        nacionalidad: "Peruano"
+    };
+};
 
