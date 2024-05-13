@@ -1,37 +1,87 @@
-const numDecimal_a_binary = (decimal) => {
-    if (decimal===0) return 0;
-    let binary = [];
-    do {
-        let resultado = decimal/2;
-        let residuo = decimal%2;
-        decimal = Math.floor(resultado);
-        binary.unshift(residuo);
-    } while (decimal>0);
-    return binary.join("");
-};
 
-const decimalAHexadecimal = (decimal) => {
-    if (decimal===0) return 0;
-    let hexadecimal = [];
-    do {
-        let resultado = decimal/16;
-        let residuo = decimal%16;
-        if (residuo ===10 ) residuo = "A";
-        if (residuo ===11 ) residuo = "B";
-        if (residuo ===12 ) residuo = "C";
-        if (residuo ===13 ) residuo = "D";
-        if (residuo ===14 ) residuo = "E";
-        if (residuo ===15 ) residuo = "F"; 
-        decimal = Math.floor(resultado);
-        hexadecimal.unshift(residuo);
-    } while (decimal>0);
-    return hexadecimal.join("");
-};
 
-const homeWorkHenry = (num) =>{
-    if (num%2===0) return numDecimal_a_binary(num);
-    if (num%2!==0) return decimalAHexadecimal(num);
-};
+
+
+function laCajaDePandora(numero){
+
+    // proximamente escribiremos codigo aqui
+
+
+    const resultados = [];
+
+    if(numero % 2 === 0) {
+        for(let i = 0; i <= numero; i++){
+            const resultado = i % 2;
+            resultados.push(resultado);
+        }
+    }else {
+        while (numero > 0) {
+            let residuo = numero % 16;
+            if (residuo < 10) {
+                resultados.push(residuo);
+            } else {
+                // Convertimos los residuos de 10 a 15 a letras A-F.
+                switch (residuo) {
+                    case 10:
+                        resultados.push('A');
+                        break;
+                    case 11:
+                        resultados.push('B');
+                        break;
+                    case 12:
+                        resultados.push('C');
+                        break;
+                    case 13:
+                        resultados.push('D');
+                        break;
+                    case 14:
+                        resultados.push('E');
+                        break;
+                    case 15:
+                        resultados.push('F');
+                        break;
+                    default:
+                        break;
+                }
+            }
+            numero = Math.floor(numero / 16);
+        }
+    
+        // Convertimos la lista de dígitos a una cadena y la invertimos para obtener el orden correcto.
+        return resultados.reverse().join('');
+    }
+
+    return resultados;
+    }
+    
+    const numero = 17;
+    console.log(laCajaDePandora(numero));
+
+    function miNombre(misDatos){
+        return misDatos;
+    };
+
+    const datos = {
+        nombre: "Lautaro",
+        edad: 19,
+        nacionalidad: "Argentino",
+    };
+
+    console.log(miNombre(datos));
+
+  } 
+ 
+
+const personalInfoDeMatias = {
+    'nombre': 'Matías',
+    'edad' : 37,
+    'nacionalidad' : 'Argentino'
+
+}
+
+const obtenerInfo = () => {
+    return personalInfoDeMatias;
+}
 
 const gerson = () => {
     return {
@@ -40,8 +90,4 @@ const gerson = () => {
         nacionalidad: "Peruano"
     };
 };
-console.log(homeWorkHenry("8"));
-console.log(homeWorkHenry("28"));
-console.log(homeWorkHenry("17"));
-console.log(homeWorkHenry("127"));
-console.log(gerson());
+
