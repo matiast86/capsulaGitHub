@@ -1,5 +1,11 @@
+
+
+
+
 function laCajaDePandora(numero){
+
     // proximamente escribiremos codigo aqui
+
 
     const resultados = [];
 
@@ -51,14 +57,37 @@ function laCajaDePandora(numero){
     const numero = 17;
     console.log(laCajaDePandora(numero));
 
-    function miNombre(){
-        const datos = {
-            nombre: "Lautaro",
-            edad: 19,
-            nacionalidad: "Argentino",
-        };
-
-        return datos;
+    function miNombre(misDatos){
+        return misDatos;
     };
 
+    const datos = {
+        nombre: "Lautaro",
+        edad: 19,
+        nacionalidad: "Argentino",
+    };
+
+    console.log(miNombre(datos));
+
+  } 
+ 
+
+const personalInfoDeMatias = {
+    'nombre': 'Matías',
+    'edad' : 37,
+    'nacionalidad' : 'Argentino'
+
+}
+
+const obtenerInfo = () => {
+    return personalInfoDeMatias;
+}
+
+const gerson = () => {
+    return {
+        nombre:"Gerson Meneses",
+        edad: 21,
+        nacionalidad: "Peruano"
+    };
+};
 
