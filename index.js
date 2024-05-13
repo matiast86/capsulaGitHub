@@ -51,14 +51,14 @@ function laCajaDePandora(numero){
     const numero = 17;
     console.log(laCajaDePandora(numero));
 
-    function miNombre(){
-        const datos = {
-            nombre: "Lautaro",
-            edad: 19,
-            nacionalidad: "Argentino",
-        };
-
-        return datos;
+    function miNombre(misDatos){
+        return misDatos;
     };
 
+    const datos = {
+        nombre: "Lautaro",
+        edad: 19,
+        nacionalidad: "Argentino",
+    };
 
+    console.log(miNombre(datos));
